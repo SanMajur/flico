@@ -1,8 +1,8 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { MuiButton } from "./MuiButton";
 import MuiCard from "./MuiCard";
-import MuiButtonLink from "./MuiButtonLink";
-import Link from "next/link";
+import ServicesCard from "./ServicesCard";
+import ImportExportIcon from "@mui/icons-material/ImportExport";
 
 export const Hero = () => {
   return (
@@ -35,9 +35,13 @@ export const Hero = () => {
           variant="h4"
           component="h2"
           gutterBottom
-          className="capitalize"
+          className="capitalize text-cyan-800"
         >
-          about us
+          facts about Future Logistics & Investment
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          We work with the leading producers, manufacturers and brands in the
+          world.
         </Typography>
       </Box>
       <Box
@@ -134,7 +138,7 @@ export const Hero = () => {
         className=" bg-gray-50 py-8 "
         aria-label="our-products"
       >
-        <Box className=" text-center my-[50px] mx-[8.3333%] sm:mx-[6.3333%]">
+        <Box className="text-center my-[50px] mx-[8.3333%] sm:mx-[6.3333%]">
           <Typography
             variant="subtitle2"
             gutterBottom
@@ -154,6 +158,37 @@ export const Hero = () => {
             At Future Logistics & Investment, we deliver a range of services to
             our clients in the Republic of South Sudan and globally.
           </Typography>
+        </Box>
+        <Box className="flex justify-between items-center flex-col text-center my-[50px] mx-[8.3333%] sm:mx-[6.3333%]">
+          <ServicesCard
+            title={"Logistics and Shipping"}
+            icon={"/shipping.png"}
+            description={
+              "At Future Logistics & Investment, our shipping services encompass integrated logistics, warehouse management, ship ownership, and end-to-end freight management."
+            }
+          />
+          <ServicesCard
+            title={"Import & Export"}
+            icon={"/import&export.png"}
+            description={
+              "At Future Logistics & Investment, we handle and process numerous shipments each month for both local and international markets."
+            }
+          />
+          <ServicesCard
+            title={"Procurement"}
+            icon={"/procument.png"}
+            description={
+              "We take pride in our highly trusted distribution network, delivering numerous orders across South Sudan and around the world."
+            }
+          />
+
+          <ServicesCard
+            title={"E-Commerce"}
+            icon={"/e-commerce.png"}
+            description={
+              "We provide comprehensive online solutions, optimizing product presentation and search capabilities, and facilitating the buying and selling of products online."
+            }
+          />
         </Box>
       </Box>
     </Box>
