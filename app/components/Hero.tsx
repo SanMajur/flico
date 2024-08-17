@@ -1,6 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import { MuiButton } from "./MuiButton";
 import MuiCard from "./MuiCard";
+import MuiButtonLink from "./MuiButtonLink";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -41,24 +43,32 @@ export const Hero = () => {
       <Box
         component={"section"}
         className=" bg-gray-200 py-4"
-        aria-label="our-services"
+        aria-label="our-products"
       >
         <Box className="my-[50px] mx-[8.3333%] sm:mx-[6.3333%]">
           <Box className="mb-8 text-center">
             <Typography
+              variant="subtitle2"
+              gutterBottom
+              className="text-cyan-600"
+            >
+              Future Logistics & Investment Products
+            </Typography>
+            <Typography
               variant="h4"
               component="h2"
               gutterBottom
-              className="capitalize"
+              className="capitalize font-semibold"
             >
-              our services
+              our Product Lines
             </Typography>
             <Typography variant="body1" className="">
-              Future Logistics & Investment specializes in a range of products
-              and goods, including but not limited to the following:
+              Future Logistics & Investment company limited specializes in a
+              range of products and goods, including but not limited to the
+              following:
             </Typography>
           </Box>
-          <Box className="flex flex-col justify-start sm:flex-row gap-8 flex-wrap">
+          <Box className="flex justify-around flex-wrap flex-row gap-12 my-8">
             <MuiCard
               title="Construction Material"
               description="Future Logistics & Investment offers a broad array of health and safety products. From reflective tapes to gloves, we have products to keep everyone safe"
@@ -66,6 +76,7 @@ export const Hero = () => {
               category={"Building & Construction"}
               imageUrl={"/construction.jpg"}
               altText={"construction site"}
+              link={"../services/construction-materials"}
             />
             <MuiCard
               title="Hospitality & Accommodation"
@@ -74,40 +85,75 @@ export const Hero = () => {
               category={"Hotel Supplies"}
               imageUrl={"/hospitality.avif"}
               altText={"hotel bed"}
+              link={"../services"}
             />
+
             <MuiCard
               title="Foodstuff"
               description="We supply seasonal high-quality foodstuff products such as rice, dates, grains, etc. We ensure great food experiences that supersede what is expected."
-              subTitle={"Foodstuff Products"}
+              subTitle={"Food Stuffs Products"}
               category={"Foodstuff Trading"}
               imageUrl={"/farming.avif"}
-              altText={"construction site"}
+              altText={"Wheat"}
+              link={"../services"}
+            />
+
+            <MuiCard
+              title="Health and Medical"
+              description="Future Logistics deals with the sales and service of laboratory equipment, therapeutic tools, medical diagnostic equipment, medical devices, hospital furniture, and accessories."
+              subTitle={"Medical Equipments"}
+              category={"Health & Wellness"}
+              imageUrl={"medic-equipments.avif"}
+              altText={"Medical equipment"}
+              link={"../services"}
+            />
+
+            <MuiCard
+              title="Consumer Goods"
+              description="We provide efficient consumer goods logistics, offering tailored supply chain solutions, from warehousing to delivery, ensuring timely and cost-effective distribution to meet market demands."
+              subTitle={"Consumer Products"}
+              category={"Retail Trading"}
+              imageUrl={"/grocery.avif"}
+              altText={"E-commerce"}
+              link={"../services"}
             />
             <MuiCard
-              title="Foodstuff"
-              description="We supply seasonal high-quality foodstuff products such as rice, dates, grains, etc. We ensure great food experiences that supersede what is expected."
-              subTitle={"Foodstuff Products"}
-              category={"Foodstuff Trading"}
-              imageUrl={"/farming.avif"}
-              altText={"construction site"}
-            />
-            <MuiCard
-              title="Foodstuff"
-              description="We supply seasonal high-quality foodstuff products such as rice, dates, grains, etc. We ensure great food experiences that supersede what is expected."
-              subTitle={"Foodstuff Products"}
-              category={"Foodstuff Trading"}
-              imageUrl={"/farming.avif"}
-              altText={"construction site"}
-            />
-            <MuiCard
-              title="Foodstuff"
-              description="We supply seasonal high-quality foodstuff products such as rice, dates, grains, etc. We ensure great food experiences that supersede what is expected."
-              subTitle={"Foodstuff Products"}
-              category={"Foodstuff Trading"}
-              imageUrl={"/farming.avif"}
-              altText={"construction site"}
+              title="Transportation"
+              description="We offer reliable, cost-effective transportation services, ensuring timely delivery of goods via road, rail, sea, and air with tailored solutions for every client."
+              subTitle={"Transportation & Logistics"}
+              category={"Logistics"}
+              imageUrl={"/transportation.jpg"}
+              altText={"Transportation Truck"}
+              link={"../services"}
             />
           </Box>
+        </Box>
+      </Box>
+      <Box
+        component={"section"}
+        className=" bg-gray-50 py-8 "
+        aria-label="our-products"
+      >
+        <Box className=" text-center my-[50px] mx-[8.3333%] sm:mx-[6.3333%]">
+          <Typography
+            variant="subtitle2"
+            gutterBottom
+            className="text-cyan-600"
+          >
+            Our Services
+          </Typography>
+          <Typography
+            variant="h4"
+            component="h2"
+            gutterBottom
+            className="capitalize font-medium"
+          >
+            We offer a wide range of services to drive progress!
+          </Typography>
+          <Typography variant="body1" className="">
+            At Future Logistics & Investment, we deliver a range of services to
+            our clients in the Republic of South Sudan and globally.
+          </Typography>
         </Box>
       </Box>
     </Box>
