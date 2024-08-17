@@ -10,7 +10,7 @@ export const Hero = () => {
         <div className="absolute top-0 left-0 right-0 h-[100vh] bg-black/50"></div>
         <Box
           component={"section"}
-          className="absolute top-36 md:top-52 left-0 right-0 container mx-auto z-10 px-8 lg:px-40 text-center flex items-center justify-center flex-col"
+          className="absolute top-32 md:top-44 left-0 right-0 container mx-auto z-10 px-8 lg:px-40 text-center flex items-center justify-center flex-col"
         >
           <Typography variant="h4" component="h1" className="mb-8">
             Welcome to Future Logistics & Investment
